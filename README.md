@@ -7,8 +7,12 @@ Pour vous aider :
 Vous aurez besoin d'importer les modules : 
 - secrets
 - string 
-> import secrets
-> import string
+
+```
+import secrets
+import string
+```
+
 Pour le module string vous utiliserez : 
 * ascii_letters
 * digits
