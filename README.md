@@ -17,7 +17,8 @@ Pour le module string vous utiliserez :
 * ascii_letters
 * digits
 * punctuation
-Pour secrets, la fonction choice : secrets.choice()
+
+Pour secrets, la fonction choice : ```secrets.choice()```<br>
 Regardez la documentation associée à ces deux modules pour vous aider. 
 Essayez de rendre votre script le plus simple et pratique possible.
 Vous pouvez le complexifier en le rendant le plus modulaire possible et laisser l'utilisateur choisir au 
