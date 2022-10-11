@@ -11,6 +11,6 @@ def menu():
 
 
 def getLength():
-    length = int(input("Enter password length (12 min)   "))
+    length = int(input("Enter password length (12 min)  "))
     if length < 12: length = 12
     return length
