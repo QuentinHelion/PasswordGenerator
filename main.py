@@ -1,14 +1,13 @@
-# from checker import checkLength
-#
-# pwd = "test"
-#
-# if(checkLength(pwd, 3)):
-#     print("hello world")
+from generator import *
+from menu import *
 
+choice = 1
 
-import string
-import secrets
-alphabet = string.ascii_letters + string.digits + string.punctuation
-password = ''.join(secrets.choice(alphabet) for i in range(20))
-
-print(password)
+while(choice):
+    choice = menu()
+    if choice == 1:
+        length = getLength();
+        pwd = generate(length)
+        print(pwd)
+    elif choice == "0":
+        exit()
