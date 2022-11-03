@@ -1,6 +1,11 @@
 TOP_MENU = "====== Password Generator ======"
 BOT_MENU = "================================"
 
+def isNumber(nbr):
+    try:
+        return int(nbr)
+    except:
+        return -1
 
 # Main menu
 def menu(complexity, length):
@@ -11,7 +16,7 @@ def menu(complexity, length):
     print("2: Change setting")
     print("0: Exit")
     print(BOT_MENU)
-    return int(input("What do you want to do ?  "))
+    return isNumber(input("What do you want to do ?  "))
 
 # Setting menu
 def setting(complexity, length, nbrOfPwd):
@@ -23,14 +28,14 @@ def setting(complexity, length, nbrOfPwd):
     print("3: Change number of password generated")
     print("0: Return")
     print(BOT_MENU)
-    return int(input("What do you want to change ?  "))
+    return isNumber(input("What do you want to change ?  "))
 
 
 
 # === CHANGINGS GENERATOR PARAMETERS MENU ===
 # Length changing menu
 def changeLength():
-    data = int(input("Enter password length (12 min):  "))
+    data = isNumber(input("Enter password length (12 min):  "))
     if data < 12:
         print("Too small value ! Length set to 12")
         data = 12
@@ -38,7 +43,7 @@ def changeLength():
 
 # Number of password generated changing menu
 def changeNbrOfPwd():
-    data = int(input("Enter number of password generated per try:  "))
+    data = isNumber(input("Enter number of password generated per try:  "))
     if data <= 0:
         print("Too small value ! Number set to 1")
         data = 1
@@ -50,7 +55,7 @@ def changeComplexity():
             1 => letter only\n\
             2 => letter + number\n\
             3 => letter + number + punctuation")
-    data = int(input("Chose complexity:  "))
+    data = isNumber(input("Chose complexity:  "))
     if data < 1 or data > 3 :
         print("Invalid value ! Complexity set to 3")
         data = 3
